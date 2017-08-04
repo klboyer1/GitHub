@@ -11,7 +11,7 @@ namespace wpfRoute
 {
     class SQLiteControl
     {
-        public String cs = "C:\\Users\\klboy\\GitHub\\wpfRoute\\wpfRoute\\AppData\\Route.db";
+        public String cs = "Data Source=C:\\Users\\klboy\\GitHub\\wpfRoute\\wpfRoute\\AppData\\Route.db;";
 
         // QUERY STATISTICS
         public int RecordCount;
