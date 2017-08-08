@@ -9,18 +9,47 @@
     <Grid>
         <StackPanel HorizontalAlignment="Left" Height="331" Margin="0,20,0,0"  Width="392" VerticalAlignment="Top">
             <StackPanel Orientation="Horizontal">
-                <Label Content="Street" HorizontalAlignment="Left" FontFamily="Arial" FontSize="18" />
-                <TextBox Text="Enter Street name" HorizontalAlignment="Left" FontFamily="Arial" FontSize="18" />
+                <Label Content="Street" HorizontalAlignment="Left" FontFamily="Arial" FontSize="18" Width="131" />
+                <TextBox Text="              " HorizontalAlignment="Left" FontFamily="Arial" FontSize="18" />
             </StackPanel>
-            <Label Content="House Number" HorizontalAlignment="Left" FontFamily="Arial" FontSize="18"  />
-            <Label Content="Unit" HorizontalAlignment="Left" FontFamily="Arial" FontSize="18"/>
-            <Label Content="TV Guide" HorizontalAlignment="Left" FontFamily="Arial" FontSize="18"/>
-            <Label Content="Code" HorizontalAlignment="Left" FontFamily="Arial" FontSize="18"/>
-            <Label Content="Path" HorizontalAlignment="Left" FontFamily="Arial" FontSize="18"/>
-            <Label Content="Seq" HorizontalAlignment="Left" FontFamily="Arial" FontSize="18"/>
-            <Label Content="Delivery" HorizontalAlignment="Left" FontFamily="Arial" FontSize="18"/>
-            <Label Content="Updated" HorizontalAlignment="Left" FontFamily="Arial" FontSize="18"/>
-            <Button Content="Save" FontFamily="Arial" HorizontalAlignment="Left" FontSize="18"/>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="House Number" HorizontalAlignment="Left" FontFamily="Arial" FontSize="18" Width="131"  />
+                <TextBox Text="              " HorizontalAlignment="Left" FontFamily="Arial" FontSize="18" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Unit" HorizontalAlignment="Left" FontFamily="Arial" FontSize="18" Width="131" />
+                <TextBox Text="              " HorizontalAlignment="Left" FontFamily="Arial" FontSize="18" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="TV Guide" HorizontalAlignment="Left" FontFamily="Arial" FontSize="18" Width="131" />
+                <TextBox Text="              " HorizontalAlignment="Left" FontFamily="Arial" FontSize="18" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Code" HorizontalAlignment="Left" FontFamily="Arial" FontSize="18" Width="131" />
+                <TextBox Text="              " HorizontalAlignment="Left" FontFamily="Arial" FontSize="18" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Path" HorizontalAlignment="Left" FontFamily="Arial" FontSize="18" Width="131" />
+                <TextBox Text="              " HorizontalAlignment="Left" FontFamily="Arial" FontSize="18" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Seq" HorizontalAlignment="Left" FontFamily="Arial" FontSize="18" Width="131" />
+                <TextBox Text="              " HorizontalAlignment="Left" FontFamily="Arial" FontSize="18" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Delivery" HorizontalAlignment="Left" FontFamily="Arial" FontSize="18" Width="131" />
+                <TextBox Text="              " HorizontalAlignment="Left" FontFamily="Arial" FontSize="18" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Updated" HorizontalAlignment="Left" FontFamily="Arial" FontSize="18" Width="131" />
+                <TextBox Text="              " HorizontalAlignment="Left" FontFamily="Arial" FontSize="18" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Save" FontFamily="Arial" HorizontalAlignment="Left" FontSize="18" Width="65" />
+                <Button Content="Update" FontFamily="Arial" HorizontalAlignment="Left" FontSize="18" Width="65" />
+                <Button Content="Delete" FontFamily="Arial" HorizontalAlignment="Left" FontSize="18" Width="65" />
+                <Button Name="btnClose" Content="Close" FontFamily="Arial" HorizontalAlignment="Left" FontSize="18" Width="65" Click="btnClose_Click" />
+            </StackPanel>
         </StackPanel>
 
     </Grid>

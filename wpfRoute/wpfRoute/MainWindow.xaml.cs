@@ -44,5 +44,11 @@ namespace wpfRoute
         {
 
         }
+
+        private void btnOpenUI_Click(object sender, RoutedEventArgs e)
+        {
+            UIScreen UIS = new UIScreen();
+            UIS.ShowDialog();
+        }
     }
 }
