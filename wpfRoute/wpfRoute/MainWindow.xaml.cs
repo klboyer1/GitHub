@@ -30,7 +30,7 @@ namespace wpfRoute
         private void btnGo_Click(object sender, RoutedEventArgs e)
         {
             SQLiteControl sss = new SQLiteControl();
-            string qry = "select * from route";
+            string qry = "select Housenum, Code, Unit, Delivery, Street, Path, Seq from route order by path, seq";
             sss.ExecQuery(qry);
             Grid1.ItemsSource =  sss.DT.DefaultView;
 
@@ -39,6 +39,10 @@ namespace wpfRoute
         private void btnClose_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+        private void Grid1_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

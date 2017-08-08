@@ -1,0 +1,27 @@
+﻿<Window x:Class="wpfRoute.UIScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wpfRoute"
+        mc:Ignorable="d"
+        Title="UIScreen" Height="437.722" Width="500">
+    <Grid>
+        <StackPanel HorizontalAlignment="Left" Height="331" Margin="0,20,0,0"  Width="392" VerticalAlignment="Top">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Street" HorizontalAlignment="Left" FontFamily="Arial" FontSize="18" />
+                <TextBox Text="Enter Street name" HorizontalAlignment="Left" FontFamily="Arial" FontSize="18" />
+            </StackPanel>
+            <Label Content="House Number" HorizontalAlignment="Left" FontFamily="Arial" FontSize="18"  />
+            <Label Content="Unit" HorizontalAlignment="Left" FontFamily="Arial" FontSize="18"/>
+            <Label Content="TV Guide" HorizontalAlignment="Left" FontFamily="Arial" FontSize="18"/>
+            <Label Content="Code" HorizontalAlignment="Left" FontFamily="Arial" FontSize="18"/>
+            <Label Content="Path" HorizontalAlignment="Left" FontFamily="Arial" FontSize="18"/>
+            <Label Content="Seq" HorizontalAlignment="Left" FontFamily="Arial" FontSize="18"/>
+            <Label Content="Delivery" HorizontalAlignment="Left" FontFamily="Arial" FontSize="18"/>
+            <Label Content="Updated" HorizontalAlignment="Left" FontFamily="Arial" FontSize="18"/>
+            <Button Content="Save" FontFamily="Arial" HorizontalAlignment="Left" FontSize="18"/>
+        </StackPanel>
+
+    </Grid>
+</Window>
