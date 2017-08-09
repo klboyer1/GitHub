@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:wpfRoute"
         mc:Ignorable="d"
-        Title="UIScreen" Height="437.722" Width="500">
+        Title="UIScreen" Height="437.722" Width="794.77">
     <Grid>
         <StackPanel HorizontalAlignment="Left" Height="331" Margin="0,20,0,0"  Width="392" VerticalAlignment="Top">
             <StackPanel Orientation="Horizontal">
                 <Label Content="Street" HorizontalAlignment="Left" FontFamily="Arial" FontSize="18" Width="131" />
-                <TextBox Text="              " HorizontalAlignment="Left" FontFamily="Arial" FontSize="18" />
+                <TextBox Height="23" Text="TextBox" HorizontalAlignment="Left" FontFamily="Arial" FontSize="18" Width="120"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Label Content="House Number" HorizontalAlignment="Left" FontFamily="Arial" FontSize="18" Width="131"  />
@@ -22,11 +22,13 @@
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Label Content="TV Guide" HorizontalAlignment="Left" FontFamily="Arial" FontSize="18" Width="131" />
-                <TextBox Text="              " HorizontalAlignment="Left" FontFamily="Arial" FontSize="18" />
+                <CheckBox             FontSize="18" />
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Label Content="Code" HorizontalAlignment="Left" FontFamily="Arial" FontSize="18" Width="131" />
-                <TextBox Text="              " HorizontalAlignment="Left" FontFamily="Arial" FontSize="18" />
+                <ComboBox Text="" HorizontalAlignment="Left" FontFamily="Arial" FontSize="18" >
+
+                </ComboBox>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Label Content="Path" HorizontalAlignment="Left" FontFamily="Arial" FontSize="18" Width="131" />
@@ -44,13 +46,14 @@
                 <Label Content="Updated" HorizontalAlignment="Left" FontFamily="Arial" FontSize="18" Width="131" />
                 <TextBox Text="              " HorizontalAlignment="Left" FontFamily="Arial" FontSize="18" />
             </StackPanel>
-            <StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
                 <Button Content="Save" FontFamily="Arial" HorizontalAlignment="Left" FontSize="18" Width="65" />
                 <Button Content="Update" FontFamily="Arial" HorizontalAlignment="Left" FontSize="18" Width="65" />
                 <Button Content="Delete" FontFamily="Arial" HorizontalAlignment="Left" FontSize="18" Width="65" />
                 <Button Name="btnClose" Content="Close" FontFamily="Arial" HorizontalAlignment="Left" FontSize="18" Width="65" Click="btnClose_Click" />
             </StackPanel>
         </StackPanel>
+        <DataGrid HorizontalAlignment="Left" Height="377" Margin="345,20,0,0" VerticalAlignment="Top" Width="432" AutoGenerateColumns="False" FontFamily="Arial" FontSize="16"/>
 
     </Grid>
 </Window>
