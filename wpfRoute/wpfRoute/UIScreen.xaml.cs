@@ -22,11 +22,20 @@ namespace wpfRoute
         public UIScreen()
         {
             InitializeComponent();
+            SQLiteControl sss = new SQLiteControl();
+            string qry = "select Housenum, Code, Unit, Delivery, Street, Path, Seq from route order by path, seq";
+            sss.ExecQuery(qry);
+            grid1.ItemsSource = sss.DT.DefaultView;
         }
 
         private void btnClose_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void grid1_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }
