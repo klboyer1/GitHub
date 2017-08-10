@@ -23,7 +23,7 @@ namespace wpfRoute
         {
             InitializeComponent();
             SQLiteControl sss = new SQLiteControl();
-            string qry = "select Housenum, Code, Unit, Delivery, Street, Path, Seq from route order by path, seq";
+            string qry = "select Street, Housenum, Code, Unit, Delivery, Path, Seq from route order by path, seq";
             sss.ExecQuery(qry);
             grid1.ItemsSource = sss.DT.DefaultView;
         }
