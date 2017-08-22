@@ -10,54 +10,57 @@
         <StackPanel HorizontalAlignment="Left" Height="377" Margin="0,20,0,0"  Width="392" VerticalAlignment="Top">
             <StackPanel Orientation="Horizontal">
                 <Label Content="Street" HorizontalAlignment="Left" FontFamily="Arial" FontSize="18" Width="131" />
-                <ComboBox Height="23"  HorizontalAlignment="Left" FontFamily="Arial" FontSize="18" Width="120" />
+                <TextBox x:Name="txtStreet" Height="23" HorizontalAlignment="Left" FontFamily="Arial" FontSize="18" Width="120"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Label Content="House Number" HorizontalAlignment="Left" FontFamily="Arial" FontSize="18" Width="131"  />
-                <TextBox Height="23" Text="TextBox" HorizontalAlignment="Left" FontFamily="Arial" FontSize="18" Width="120"/>
+                <TextBox x:Name="txtHouseNum" Height="23" HorizontalAlignment="Left" FontFamily="Arial" FontSize="18" Width="120"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Label Content="Unit" HorizontalAlignment="Left" FontFamily="Arial" FontSize="18" Width="131" />
-                <TextBox Height="23" Text="TextBox" HorizontalAlignment="Left" FontFamily="Arial" FontSize="18" Width="120"/>
+                <TextBox x:Name="txtUnit" Height="23" HorizontalAlignment="Left" FontFamily="Arial" FontSize="18" Width="120"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Label Content="TV Guide" HorizontalAlignment="Left" FontFamily="Arial" FontSize="18" Width="131" />
-                <CheckBox    Padding="10"         FontSize="18" FontFamily="Arial" />
+                <TextBox Height="23" TextWrapping="Wrap" Width="120" FontFamily="Arial" FontSize="18"/>
+
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Label Content="Code"  HorizontalAlignment="Left" FontFamily="Arial" FontSize="18" Width="120" />
-                <ComboBox Height="23"  HorizontalAlignment="Left" FontFamily="Arial" FontSize="18" Width="120" >
-                    <ComboBoxItem>"DS"</ComboBoxItem>
-                    <ComboBoxItem>"WE"</ComboBoxItem>
-                    <ComboBoxItem>"MF"</ComboBoxItem>
-                    <ComboBoxItem>"WS"</ComboBoxItem>
-                    <ComboBoxItem>"SO"</ComboBoxItem>
+                <ComboBox x:Name="cboCode" Height="23"  HorizontalAlignment="Left" FontFamily="Arial" FontSize="18" Width="120" SelectionChanged="ComboBox_SelectionChanged" >
+                    <ComboBoxItem>DS</ComboBoxItem>
+                    <ComboBoxItem>WE</ComboBoxItem>
+                    <ComboBoxItem>MF</ComboBoxItem>
+                    <ComboBoxItem>WS</ComboBoxItem>
+                    <ComboBoxItem>SO</ComboBoxItem>
                 </ComboBox>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Label Content="Path" HorizontalAlignment="Left" FontFamily="Arial" FontSize="18" Width="131" />
-                <TextBox Height="23" Text="TextBox" HorizontalAlignment="Left" FontFamily="Arial" FontSize="18" Width="120"/>
+                <TextBox x:Name="txtPath" Height="23" HorizontalAlignment="Left" FontFamily="Arial" FontSize="18" Width="120"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Label Content="Seq" HorizontalAlignment="Left" FontFamily="Arial" FontSize="18" Width="131" />
-                <TextBox Height="23" Text="TextBox" HorizontalAlignment="Left" FontFamily="Arial" FontSize="18" Width="120"/>
+                <TextBox x:Name="txtSeq" Height="23" HorizontalAlignment="Left" FontFamily="Arial" FontSize="18" Width="120"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Label Content="Updated" HorizontalAlignment="Left" FontFamily="Arial" FontSize="18" Width="131" />
-                <TextBox Height="23" Text="TextBox" HorizontalAlignment="Left" FontFamily="Arial" FontSize="18" Width="120"/>
+                <TextBox x:Name="txtUpdated" Height="23" HorizontalAlignment="Left" FontFamily="Arial" FontSize="18" Width="120"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Label Content="Delivery" HorizontalAlignment="Left" FontFamily="Arial" FontSize="18" Width="131" />
-                <TextBox Height="70" Text="TextBox" HorizontalAlignment="Left" FontFamily="Arial" FontSize="18" Width="188" TextWrapping="Wrap"/>
+                <TextBox x:Name="txtDelivery" Height="70" HorizontalAlignment="Left" FontFamily="Arial" FontSize="18" Width="188" TextWrapping="Wrap"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
-                <Button Content="Save" FontFamily="Arial" HorizontalAlignment="Left" FontSize="18" Width="65" Margin="10,0,0,0"/>
-                <Button Content="Update" FontFamily="Arial" HorizontalAlignment="Left" FontSize="18" Width="65" Margin="10,0,0,0" />
-                <Button Content="Delete" FontFamily="Arial" HorizontalAlignment="Left" FontSize="18" Width="65" Margin="10,0,0,0"/>
-                <Button Name="btnClose" Content="Close" FontFamily="Arial" HorizontalAlignment="Left" FontSize="18" Width="65"  Margin="10,0,0,0" Click="btnClose_Click" />
+                <Button x:Name="btnSave" Content="Save" FontFamily="Arial" HorizontalAlignment="Left" FontSize="18" Width="65" Margin="10,0,0,0" Click="btnSave_Click" />
+                <Button x:Name="btnUpdate" Content="Update" FontFamily="Arial" HorizontalAlignment="Left" FontSize="18" Width="65" Margin="10,0,0,0" />
+                <Button x:Name="btnDelete" Content="Delete" FontFamily="Arial" HorizontalAlignment="Left" FontSize="18" Width="65" Margin="10,0,0,0"/>
+                <Button x:Name="btnClose" Content="Close" FontFamily="Arial" HorizontalAlignment="Left" FontSize="18" Width="65"  Margin="10,0,0,0" Click="btnClose_Click" />
             </StackPanel>
         </StackPanel>
-        <DataGrid Name="grid1" HorizontalAlignment="Left" Height="377" Margin="345,20,0,0" VerticalAlignment="Top" Width="432" AutoGenerateColumns="True" FontFamily="Arial" FontSize="16" SelectionChanged="grid1_SelectionChanged"/>
+        <DataGrid Name="grid1" HorizontalAlignment="Left" Height="377" Margin="345,20,0,0" VerticalAlignment="Top" Width="432" AutoGenerateColumns="False" FontFamily="Arial" FontSize="16" SelectionChanged="grid1_SelectionChanged" >
+
+        </DataGrid>
 
     </Grid>
 </Window>

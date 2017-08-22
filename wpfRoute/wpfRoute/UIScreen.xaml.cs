@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Data.SQLite;
 
 namespace wpfRoute
 {
@@ -35,7 +36,35 @@ namespace wpfRoute
 
         private void grid1_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            this.txtStreet.Text = " "; 
+        }
+
+       
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
 
         }
+
+        private void btnSave_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                SQLiteControl sss = new SQLiteControl();
+                int houseNum = Convert.ToInt32(this.txtHouseNum.Text);
+                String query = "insert into route (Street, Housenum, Code, Unit, Delivery) " +
+                    "Values " +
+                    "('" + this.txtStreet.Text + "','" + houseNum + "','" + this.cboCode.Text + "','" + this.txtUnit.Text + "','" + this.txtDelivery.Text + "')";
+
+                sss.ExecNonQuery(query);
+                MessageBox.Show("Customer added successfully...");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+                throw;
+            }
+        }
+
     }
 }

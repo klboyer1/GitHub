@@ -37,7 +37,28 @@ namespace wpfRoute
             }
             catch (Exception ex)
             {
+                MessageBox.Show(ex.Message.ToString());
                 throw;
+            }
+        }
+        // EXECUTE NON QUERY SUB
+        public void ExecNonQuery(String Query)
+        {
+            SQLiteConnection conn = new SQLiteConnection(cs);
+            try
+            {
+                conn.Open();
+                SQLiteCommand Cmd = new SQLiteCommand(Query, conn);
+                Cmd.ExecuteNonQuery();
+            } 
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+                throw;
+            }
+            finally
+            {
+                conn.Close();
             }
         }
     }
