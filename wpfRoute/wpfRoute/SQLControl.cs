@@ -34,6 +34,8 @@ namespace wpfRoute
 
                 // EXECUTE COMMAND & FILL DATASET
                 RecordCount = DA.Fill(DT);
+                DA.Update(DT);
+                conn.Close();
             }
             catch (Exception ex)
             {

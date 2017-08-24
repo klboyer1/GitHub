@@ -24,9 +24,10 @@ namespace wpfRoute
         {
             InitializeComponent();
             SQLiteControl sss = new SQLiteControl();
-            string qry = "select Street, Housenum, Code, Unit, Delivery, Path, Seq from route order by path, seq";
+            string qry = "select Housenum, Code, Unit, Delivery, Street, Path, Seq from route order by path, seq";
             sss.ExecQuery(qry);
-            grid1.ItemsSource = sss.DT.DefaultView;
+            grid2.ItemsSource = sss.DT.DefaultView;
+            MessageBox.Show(sss.RecordCount.ToString());
         }
 
         private void btnClose_Click(object sender, RoutedEventArgs e)
@@ -36,10 +37,16 @@ namespace wpfRoute
 
         private void grid1_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            this.txtStreet.Text = " "; 
+            DataGrid dg = (DataGrid)sender;
+            DataGridRow dr = grid2.SelectedItem as DataGridRow;
+
+            if (dr != null)
+            {
+                this.txtStreet.Text = "It worked";
+            }
         }
 
-       
+
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
